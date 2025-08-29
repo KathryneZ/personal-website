@@ -1,0 +1,38 @@
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon?
+._*
+.Spotlight-V100
+.Trashes
+
+# VS Code
+.vscode/
+.history/
+*.code-workspace
+
+# Logs
+logs/
+*.log
+*.log.*
+
+# Office temp files (avoid the weird ~$ lock files)
+~$*.doc*
+~$*.xls*
+~$*.ppt*
+*.tmp
+
+# Ignore unwanted project folders
+Code-alongs/
+Lecture slides/
+server/
+
+# macOS system files
+.DS_Store
+
+# VS Code settings
+.vscode/
+
+# Office temp files
+~$*.doc*
