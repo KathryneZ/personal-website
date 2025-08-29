@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="UTF-8">
+  <title>Chatroom</title>
+  <script src="scripts/svg.min.js"></script>
+</head>
+<body>
+    <h1>Chatroom</h1>
+    <label>Username: <input id="username" /></label>
+    <br>
+    <style>
+        div#chatLog {
+            height: 200px;
+            border: 1px solid black;
+            overflow-y: scroll
+        }
+        div#drawing{
+            border:1px solid #000; 
+            width:500px; 
+            height:300px
+        }
+
+    </style>
+    <div id="chatLog"></div>
+
+    <input id="chatBox" type ="textBox" placeholder="Type your message here..." />
+    <h3>drawing area</h3>
+    <div id="drawing">
+    </div>
+    <div>
+        <button id="clearBtn">Clear Drawing</button>
+    </div>
+
+    <script src="scripts/scripts.js"></script>
+</body>
+</html>

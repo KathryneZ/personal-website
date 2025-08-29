@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg">
+    <circle r="50" cx="100" cy="100" style="fill: red;">
+    <circle r="20" cx="100" cy="100" style="fill: blue;">
+</svg>
+
+<!--take note of the attributes and elements are available to us. Structure similar to html tree structure-->

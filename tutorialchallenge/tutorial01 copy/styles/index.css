@@ -1,0 +1,240 @@
+/* ========== BASE ========== */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    font-family: 'Figtree', sans-serif;
+    padding-top: 4rem;       
+    background: #f9f9f9;
+    color: #333;
+    line-height: 1.6;
+  }
+  
+  /* ========== FIXED HEADER ========== */
+  .site-header {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    height: 4rem;
+    background: #ffffffcc;      
+    backdrop-filter: saturate(180%) blur(10px);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 2rem;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+    z-index: 1000;
+  }
+  .site-header .logo {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #111;
+    display: flex;
+    align-items: center;
+  }
+
+  /* Logo image inside header */
+.site-logo {
+    width: 40px;           
+    height: auto;
+    margin-right: 0.5rem;  
+    vertical-align: middle;  
+    display: inline-block;
+  }
+
+  .site-nav ul {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+  }
+  .site-nav a {
+    text-decoration: none;
+    color: #555;
+    font-weight: 500;
+    transition: color 0.2s ease;
+  }
+  .site-nav a:hover,
+  .site-nav a:focus {
+    color: hsl(210, 100%, 40%);
+  }
+  
+  /* ========== MAIN & GRID ========== */
+  main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+  }
+  .section-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-top: 1rem;
+  }
+  
+  /* ========== CARD & CLICKABLE LINK ========== */
+  .section-card {
+    position: relative;
+    background: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    min-height: 200px;
+  }
+  .section-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.08);
+  }
+ 
+  .card-link {
+    display: block;
+    width: 100%;
+    height: 100%;
+    color: inherit;
+    text-decoration: none;
+  }
+  
+  /* ========== IMAGE ZOOM ========== */
+  .card-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.5s ease;
+  }
+  .section-card:hover .card-image img {
+    transform: scale(1.05);
+  }
+  
+  /* ========== VISIBLE CONTENT ========== */
+  .section-card h2 {
+    margin: 1rem 1.5rem 0.5rem;
+    font-size: 1.4rem;
+    color: #111;
+  }
+  .preview {
+    margin: 0 1.5rem 1rem;
+    color: #555;
+  }
+  
+  /* ========== HIDDEN DETAILS ========== */
+  .details {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(255,255,255,0.95);
+    padding: 1rem 1.5rem;
+    transform: translateY(100%);
+    transition: transform 0.4s ease;
+    max-height: 70%;
+    overflow-y: auto;
+    z-index: 1;
+  }
+  .section-card:hover .details {
+    transform: translateY(0);
+  }
+
+/* About Me layout tweaks */
+.about-me-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    align-items: flex-start;
+    margin-top: 1.5rem;
+}
+  
+  /* Text column stays the same */
+  .about-me-text {
+    flex: 1 1 45%;
+  }
+  
+
+  .about-me-images {
+    flex: 1 1 45%;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  
+    
+    max-height: calc(100vh - 8rem);
+    overflow-y: auto;
+    padding-right: 1rem;   
+  }
+  
+
+  .about-me-images::-webkit-scrollbar {
+    width: 6px;
+  }
+
+
+  /* ===== Submissions page ===== */
+main h1 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    font-weight: 700;
+    color: #111;
+  }
+  
+  .submission-section {
+    margin-bottom: 2.5rem;
+  }
+  
+  .submission-section h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    font-weight: 600;
+    color: #333;
+  }
+  
+  .submission-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1rem;
+  }
+  
+  /* Card */
+  .submission-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #fff;
+    border-radius: 8px;
+    padding: 1rem;
+    border: 1px solid #ddd;
+    text-decoration: none;
+    color: inherit;
+    transition: background 0.2s ease, transform 0.2s ease;
+  }
+  
+  .submission-card:hover {
+    background: hsl(210, 100%, 98%);
+    transform: translateY(-2px);
+  }
+  
+
+  .card-title {
+    font-weight: 600;
+  }
+  
+
+  .card-arrow {
+    font-size: 1.2rem;
+    transition: transform 0.2s ease;
+  }
+  
+  .submission-card:hover .card-arrow {
+    transform: translateX(4px);
+  }  
+
+
+
+  /* ========== FOOTER ========== */
+  footer {
+    text-align: center;
+    padding: 2rem 0;
+    font-size: 0.9rem;
+    color: #777;
+  }

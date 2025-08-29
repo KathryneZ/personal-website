@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;700&display=swap" rel="stylesheet">
+
+    <title>Diary 02</title>
+    <style>
+        body {
+        margin: 30px;
+        padding: 15px;
+        line-height: 1.6;
+        font-family: 'Figtree', sans-serif;
+        }
+        code {
+        padding: 2px 4px;
+        font-family: 'Figtree', sans-serif;
+        }
+        a {
+        color: hsl(210, 100%, 50%);
+        font-family: 'Figtree', sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <h1>Budget Tracker Progress</h1>
+    <p>During the week, I focused on building the budget tracking part of my webpage. My goal was to let users log both expenses and income and view them by category.</p>
+
+    <p>I started by setting up two buttons, “+EXPENSE” and “+INCOME,” which open the same form. Depending on which one is clicked, a <code>currentType</code> variable records whether the entry is income or expense. I reused the same popup form for both types, so users can fill in details like amount, category, description, and date.</p>
+
+    <p>Once the form is submitted, I turn the inputs into an object and store them in a <code>categoryData</code> object. Each category stores all its entries, and a colour that users can later customise.</p>
+    <p>So each category:</p>
+    <ul>
+        <li>Knows if it is an expense or income</li>
+        <li>Stores a colour</li>
+        <li>Has a <code>records</code> array of all its entries</li>
+    </ul>
+
+    <p>When a block is clicked, it opens a popup that lists all entries for that category. I added sliders that let users adjust the colour of the block using HSL values (referring to a past tutorial challenge). Once the colour is set, it's applied to both the block and popup, and saved for next time.</p>
+
+    <p>I ran into a few issues while building this. At one point, I couldn’t see new categories appear even though they were saved in the data. After checking, I realised I forgot to call the function that creates the category block and appends it to the page.</p>
+    <p>Another issue was with applying colours, as it didn’t work because I had not realised the need to set which block was “selected.”</p>
+
+    <p>These small problems taught me a lot about how important it is to keep both the internal state (such as stored data or selected elements) and the visual state (what users see) in sync. It also reminded me to be more conscious of reused elements like one popup for multiple categories, and the need to reset or reassign values like <code>currentType</code> or <code>selectedCategoryDiv</code> at the right time. I painfully relied a lot on <code>console.log()</code> to inspect values and understand what was wrong.</p>
+
+    <p>I also decided to make all my popups behave like modals (with a dimmed background that appears above the content), referencing this tutorial: <br>
+        <a href="https://www.w3schools.com/howto/howto_css_modals.asp">Here!</a><br>
+        Wrapping the popups in a <code>modalBackdrop</code> made the layout feel a lot more polished.</p>
+
+    <p>Right now, the tracker can add and display income/expense categories, update totals, and let users customise each category block’s colour. Moving on, I will be working on the calendar/mood selection side of the webpage.</p>
+
+    <footer>
+        <p><a href="index.htm"><b>Return to the previous page.</b></a></p>
+    </footer>
+</body>
+</html>

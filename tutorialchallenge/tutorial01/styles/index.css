@@ -1,0 +1,113 @@
+/* General*/
+html, body, footer {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    font-family: 'Figtree', sans-serif;
+    font-size: 16px;
+    color: #333;
+    background-color: #b9dae5df;
+    line-height: 1.5;
+}
+
+header, nav, div, footer {
+    background-color: white;
+    margin: 5px;
+    border-radius: 15px;
+    padding: 30px;
+}
+
+/* Grid Layout */
+body {
+    display: grid;
+    grid-template-areas:
+        "header header"
+        "menu content"
+        "footer footer";
+    grid-template-rows: auto 1fr auto; 
+    grid-template-columns: 1fr 5fr;
+    height: 100vh; 
+    gap: 8px; 
+    padding: 12px; 
+    box-sizing: border-box; 
+}
+
+/* Header */
+header {
+    grid-area: header;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background-color: #fff;
+    border-bottom: 1px solid #eaeaea;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+menu {
+    grid-area: menu;
+    align-items: left;
+    padding: 20px;
+}
+
+/* Footer */
+footer {
+    grid-area: footer;
+    text-align: left;
+    padding: 10px;
+    background-color: white;
+    border-radius: 10px;
+}
+
+/* Navigation */
+nav {
+    grid-area: menu;
+    padding: 30px;
+}
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+nav ul li {
+    margin-bottom: 10px;
+}
+nav ul li a {
+    text-decoration: none;
+    color: #2489a8df;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+nav ul li a:hover {
+    color: #333;
+}
+
+/*Content*/
+div {
+    grid-area: content;
+    padding: 35px 30px;
+    }
+div section ul li a {
+    text-decoration: none;
+    color: #2489a8df;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+div section ul li a:hover {
+    color: #333;
+}
+
+/* Image Styling */
+img {
+    max-width: 50%; 
+    height: auto;    
+    display: block;  
+    border-radius: 10px; 
+    margin: 20px auto; 
+}
+
+/*Submissions*/
+#submissions {
+    clear: both;
+}

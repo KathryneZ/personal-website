@@ -1,0 +1,55 @@
+body {
+    font-family: "Segoe UI", Tahoma, sans-serif;
+    background-color: #eeeff7;
+    padding: 32px;
+    margin: 0;
+  }
+h1 {
+    font-size: 28px;
+    color: #0b0b20;
+}
+  
+select {
+    font-size: 16px;
+    padding: 8px;
+    margin-top: 16px;
+    margin-bottom: 24px;
+    width: 100%;
+    max-width: 500px;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+}
+  
+#moduleInfo {
+    background: none;
+    padding: 0;
+    margin-top: 24px;
+}
+#moduleInfo h2 {
+    font-size: 22px;
+    color: #0b0b20;
+    margin-bottom: 16px;
+}
+  
+.card {
+    background-color: white;
+    padding: 16px;
+    margin-bottom: 20px;
+    border-radius: 12px;
+    box-shadow: 0 3px 8px rgba(33, 33, 33, 0.1);
+    border-left: 10px solid;
+} 
+.card {
+    border-color: #a4beff;
+    background-color: #e5ecff;
+} 
+.card strong {
+    font-size: 16px;
+    color: #0b0b20;
+}
+.card p {
+    margin: 4px 0;
+    font-size: 14px;
+    color: #0b0b20;
+}
+  

@@ -1,0 +1,257 @@
+/*====================================================
+  Final Project (Spending + Mood Tracker) — Unified Style
+======================================================*/
+
+/* 1) Import your site font */
+@import url('https://fonts.googleapis.com/css2?family=Figtree:wght@400;700&display=swap');
+
+/* 2) Global reset & base typography */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Figtree', sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
+  line-height: 1.6;
+}
+
+.topBtn {
+  display: flex;
+  width: 50%;          
+  margin: 0 auto 10px 0;   
+  justify-content: space-evenly;
+  padding: 0 20px;       
+  box-sizing: border-box;
+}
+
+
+.topBtn button {
+  border: none;
+  border-radius: 989px;  
+  padding: 10px 30px;  
+  font-size: 16px;           
+  font-weight: 600;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  margin: 28px 0 0 0; 
+}
+
+/*Expense */
+.expense-btn {
+  background: hsl(0, 100%, 68%);
+  color: #fff;
+}
+
+/*Income */
+.income-btn {
+  background: hsl(167, 100%, 36%);
+  color: #fff;
+}
+
+.topBtn button:hover {
+  transform: translateY(-2px);     
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+
+/* Main layout */
+.main {
+  display: flex;
+  gap: 2rem;
+  padding: 2rem;
+  height: calc(100vh - 6rem); 
+}
+
+.leftColumn,
+.rightColumn {
+  background: white;
+  border-radius: 8px;
+  padding: 1.5rem;
+  overflow-y: auto;
+}
+
+
+.leftColumn {
+  flex: 1;
+}
+
+.rightColumn {
+  flex: 1;
+}
+
+/*Search bar */
+#searchBar {
+  width: 100%;
+  padding: 0.75rem;
+  margin-bottom: 1.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-family: 'Figtree', sans-serif;
+}
+
+/*Category blocks */
+.categoryBlock {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  font-size: 0.95rem;
+  transition: background-color 0.2s ease, box-shadow 0.2s ease;
+  cursor: pointer;
+}
+
+.categoryBlock:hover {
+  background-color: #f0f0f0;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+/*Calendar grid */
+#calendarGrid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 0.5rem;
+}
+
+.calendarCell {
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  padding: 0.75rem;
+  text-align: center;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 0.85rem;
+}
+
+.calendarCell:hover {
+  background-color: #f5f5f5;
+  transform: translateY(-1px);
+}
+
+/*Modal backdrop */
+.modalBackdrop {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0,0,0,0.4);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+}
+
+.modalBackdrop:not(.temporary) {
+  display: flex;
+}
+
+/* Popups */
+.popup {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  padding: 1.5rem;
+  width: 90%;
+  max-width: 360px;
+  animation: fadeIn 0.2s ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.popup h3 {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+}
+
+.popup input,
+.popup button,
+.popup select {
+  width: 100%;
+  font-family: 'Figtree', sans-serif;
+  margin-bottom: 1rem;
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+/*Mood popup buttons */
+.moodOptions {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.moodBtn {
+  background: #f0f0f0;
+  border: 1px solid #bbb;
+  border-radius: 6px;
+  padding: 0.75rem;
+  font-size: 1rem;
+  transition: background-color 0.2s ease, box-shadow 0.2s ease;
+  cursor: pointer;
+}
+
+.moodBtn:hover {
+  background-color: #e0e0e0;
+}
+
+#moodPopup.angry    { background-color: rgba(242,95,92,0.1); }
+#moodPopup.happy    { background-color: rgba(255,224,102,0.1); }
+#moodPopup.indifferent { background-color: rgba(160,160,160,0.1); }
+#moodPopup.upset    { background-color: rgba(112,193,179,0.1); }
+
+/*Selected mood state */
+.moodBtn.selected {
+  box-shadow: inset 0 0 0 2px #333;
+  background-color: #ddd;
+}
+
+/*Category color sliders */
+.sliders label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
+}
+
+.sliders input[type="range"] {
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+/*Record list */
+#recordList {
+  list-style: none;
+  padding-left: 0;
+  margin: 1rem 0;
+}
+
+#recordList li {
+  padding: 0.25rem 0;
+  font-size: 0.9rem;
+}
+
+/*temporary backdrops */
+.temporary {
+  display: none !important;
+}

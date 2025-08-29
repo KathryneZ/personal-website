@@ -1,0 +1,46 @@
+p { color: red;
+font-weight:  bold;
+}
+
+.blue {
+    color: blue;
+}
+
+.red {
+    color: red;
+}
+
+
+/*.red {
+    color: red;
+}
+.blue {
+    color: blue;
+} 
+classes can be similar (like i can grp same style w same class).
+but ids have to be unique.
+*/
+
+/*paragraphOne {
+    color:red;
+}
+#paragraphTwo {
+    color: blue;
+} */
+
+
+
+/* span {
+    color: blue;
+}
+
+p {
+    color: red;
+}
+div {
+    color: green;
+}
+    even when the span is nested in the div, it will still be blue.
+*/
+
+

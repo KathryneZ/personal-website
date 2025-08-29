@@ -1,0 +1,41 @@
+html {
+    height: 100%;
+}
+
+body {
+    background-color: lightgray;
+    margin: 0;
+    display: grid;
+    grid-template-areas:
+    "header header"
+    "menu content"
+    "footer footer";
+    grid-template-rows: 1fr 5fr 1fr; /*fr stands for fractional units*/
+    grid-template-columns: 1fr 5fr;
+    height: 100%;
+}
+
+header {
+    grid-area: header
+}
+
+nav {
+    grid-area: menu
+}
+
+div {
+    grid-area: content
+}
+
+footer {
+    grid-area: footer
+    }
+
+
+header, nav, div, footer {
+    background-color: white;
+    margin: 5px;
+    border-radius: 10px;
+    padding: 20px;
+}
+

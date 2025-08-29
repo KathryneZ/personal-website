@@ -1,0 +1,171 @@
+/* General */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', 'Montserrat', Arial, sans-serif; 
+    line-height: 1.6;
+}
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Montserrat:wght@400;600;700&display=swap');
+
+/* differentiating pages */
+
+.h02index {
+    color: #F8F8F8; 
+    background-color: rgb(31, 29, 29); 
+}
+
+/* End 1 */
+.h02end1 {
+    background-color: rgb(255, 246, 238);
+    color: #5b1a07;
+}
+.h02end1 h1{
+    color:#EF5539
+}
+.h02end1 h2{
+    color:#EF5539
+}
+
+/* End 2 */
+.h02end2 {
+    color:#2c4ae1;
+    background-color:rgb(249, 249, 249);
+}
+.h02end2 h1{
+    color:#395aff;
+}
+.h02end2 h2{
+    color:#395aff;
+}
+.h02end2 h3{
+    color:#395aff;
+}
+
+/* Headers */
+h1, h2, h3 {
+    text-align: center;
+    margin: 20px 40px;
+    color: #ffd322; 
+    font-weight: 700;
+}
+
+h1 {
+    font-size: 36px;
+    text-transform: uppercase;
+}
+
+h2 {
+    font-size: 28px;
+    text-transform: uppercase;
+}
+
+h3 {
+    font-size: 20px;
+    color: #EF5539; 
+    text-transform: capitalize;
+}
+
+/* Paragraph */
+.story-text {
+    font-size: 18px;
+    margin: 20px auto;
+    width: 80%;
+    line-height: 1.8;
+}
+
+/*POP of colour*/
+#pop {
+    color: #EF5539;
+}
+
+/* Quotes */
+.Aquote {
+    font-size: 15px;
+    font-family: 'Courier New', Courier, monospace;
+    font-style: italic;
+    font-weight: bold;
+    color: #F8F8F8; 
+    background: #EF5539; 
+    text-align: center;
+    margin: 20px 40px;
+    padding: 20px;
+    border-radius: 50px;
+    box-shadow: 0px 2px 4px rgb(0, 0, 0);
+    border: 0.8px solid #a1a1a1;
+}
+.h02end2 .Aquote{
+    color: #F8F8F8; 
+    background: #395aff; 
+    text-align: center;
+}
+/* spoken quotes */
+.h02index .quote{
+    color: #ffe68b; 
+}
+
+.h02end1 .quote{
+    color:#ff5500;
+}
+
+.h02end2 .quote{
+    color:#238aff;
+}
+/* Links */
+a {
+    color: #EF5539; 
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+a:hover {
+    color: #FAD900; 
+    text-decoration: underline;
+}
+
+/* Images */
+img {
+    display: block;
+    margin: 20px auto;
+    border-radius: 10px;
+    width: 70%;
+    max-width: 600px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #EF5539; 
+    color: #F8F8F8;
+}
+
+footer a {
+    color: #F8F8F8;
+}
+
+footer a:hover {
+    color: #FAD900;
+}
+
+/* Lists */
+ul {
+    list-style-type: disc;
+    margin: 20px auto;
+    padding-left: 40px;
+    color: #F8F8F8;
+    line-height: 1.8;
+    width: 70%;
+}
+
+ul li {
+    margin: 10px 0;
+}
+li a {
+    color: #c0c2cd;
+}
+
+li a:hover {
+    color: #FAD900;
+}

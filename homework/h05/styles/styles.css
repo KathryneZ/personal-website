@@ -1,0 +1,31 @@
+/*
+the aside element to the left of the page taking up 30% of the page width.
+the section element to the right side of the page taking up 70% of the page width.
+In the same CSS file, give both the aside and section elements a light grey color (but dark enough that you should be able to see them on the page).
+*/
+
+
+body {
+    margin: 0;
+    display: grid;
+    grid-template-columns: 30% 70%;
+    height: 100vh;
+}
+aside {
+    background-color: rgb(219, 219, 219);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+section {
+    background-color: rgb(190, 190, 190);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+input [type="range"] {
+    display: block;
+}

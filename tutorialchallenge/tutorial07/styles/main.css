@@ -1,0 +1,31 @@
+body {
+    display: grid;
+    grid-template-areas:
+        "header"
+        "main"
+        "footer";
+    grid-template-rows: 2fr 5fr 2fr; 
+    grid-template-columns: auto;
+    height: 100vh; 
+    gap: 8px; 
+    padding: 12px; 
+    box-sizing: border-box; 
+}
+
+header{
+    text-align: center;
+}
+
+main {
+    text-align: center;
+}
+
+footer{
+    text-align: center;
+}
+
+
+button {
+    width: 100vw;
+    font-size: large;
+}

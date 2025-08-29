@@ -1,0 +1,13 @@
+server is running on port 11257
+1 | const port = 11257
+2 | const clients = []
+3 | const server = Bun.serve({
+                       ^
+error: Failed to start server. Is port 11257 in use?
+ syscall: "listen",
+   errno: 0,
+    code: "EADDRINUSE"
+
+      at /Users/yx/Documents/24-25 Year 2/Y2S2/NM2207/tutorialchallenge/tutorial09/server.js:3:20
+
+Bun v1.2.6 (macOS arm64)
