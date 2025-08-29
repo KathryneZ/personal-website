@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;700&display=swap" rel="stylesheet">
+
+        <title>Diary 03</title>
+        <style>
+            body {
+                margin: 30px;
+                padding: 15px;
+                line-height: 1.6;
+                font-family: 'Figtree', sans-serif;
+            }
+            code {
+                background-color: #f2f5f7;
+                padding: 5px;
+                margin: 5px 0;
+                font-size: smaller;
+                color: #006dd9;
+                font-family: 'Courier', monospace;
+            }
+            a {
+                color: #0080ff;
+                font-family: 'Figtree', sans-serif;
+            }
+        </style>
+    </head>
+    
+    <body>
+        <h1>MOOD TRACKER SECTION</h1>
+    
+        <h2>Planned logical flow:</h2>
+        <ul>
+            <li>Create a mood‑selection popup that matches the style and behavior of the expense/income form</li>
+            <li>Build the calendar grid for the month by looping in JavaScript</li>
+            <li>After the grid appears, attach a click listener to each date so that clicking opens the mood popup and remembers which day was chosen</li>
+            <li>Let the user pick one of four moods and immediately update that date cell with a matching icon and background color</li>
+            <li>Save all mood entries in local storage so they remain visible after reloading</li>
+        </ul>
+    
+        <h2>Execution:</h2>
+        <p>
+            I first captured references:
+            <code>const moodPopup = document.getElementById('moodPopupWrapper');</code>
+            <code>const moodButtons = document.querySelectorAll('.moodBtn');</code>
+        </p>
+    
+        <p>
+            In <code>renderCalendar()</code>, I used:
+            <code>for (let day = 1; day <= 30; day++)</code>
+            and bound <code>cell.addEventListener('click', openMoodPopup)</code> 
+            inside that loop. Initially listeners were too early, so moving them inside fixed silent clicks.
+        </p>
+    
+        <p>
+            The <code>openMoodPopup</code> function does:
+            <code>selectedDate = event.currentTarget.dataset.date</code>
+            then clears previous highlights by looping over <code>moodButtons</code> 
+            with a standard <code>for (let index = 0; index < moodButtons.length; index++)</code> 
+            and removing classes.
+        </p>
+    
+        <p>
+            For mood choice, each button uses a similar loop to add an <code>'active'</code> class to <code>this</code> and remove it from others, ensuring only one is highlighted.
+        </p>
+    
+        <p>
+            On submit, I find the chosen mood via a loop, update <code>moodData[selectedDate]</code>, 
+            call <code>applyMoodToCell</code> to inject emoji and class, then hide the popup and save with 
+            <code>localStorage.setItem('moodData', JSON.stringify(moodData))</code>.
+        </p>
+    
+        <p>
+            I implemented <code>loadMoods()</code> before calendar generation to parse stored data and call 
+            <code>applyMoodToCell</code> for each saved entry. This prevented errors and ensured persistence.
+        </p>
+    
+        <footer>
+            <p><a href="index.htm"><b>Return to the previous page.</b></a></p>
+        </footer>
+    </body>
+    
+    </html>
+    
